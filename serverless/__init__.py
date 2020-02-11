@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright 2017 Evolent Health, Inc.
+# Copyright 2020 Evolent Health, Inc.
 
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -23,5 +23,5 @@ from serverless.wrappers import Request, Response
 
 
 __version__ = '0.0.5'
-__author__ = 'Peter Hwang'
+__author__ = 'Peter Hwang, Thomas Chen'
 __licence__ = 'Apache License 2.0'
