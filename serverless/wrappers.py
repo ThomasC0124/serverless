@@ -84,12 +84,15 @@ class Request:
         """
         if not self._data:
             body = self.event.get('body', None)
-            try:
-                self._data = json.loads(body) if body else dict()
-            except JSONDecodeError as e:
-                self.logger.info('Failed to decode request body=%r', body)
-                errors = (str(e))
-                raise BadRequest('Malformed request body', errors)
+            if not isinstance(body, dict):
+                try:
+                    self._data = json.loads(body) if body else dict()
+                except JSONDecodeError as e:
+                    self.logger.info('Failed to decode request body=%r', body)
+                    errors = (str(e))
+                    raise BadRequest('Malformed request body', errors)
+            else:
+                self._data = body
         return self._data
 
     @property
