@@ -22,6 +22,6 @@ from serverless.exceptions import (
 from serverless.wrappers import Request, Response
 
 
-__version__ = '0.0.5'
+__version__ = '0.0.6'
 __author__ = 'Peter Hwang, Thomas Chen'
 __licence__ = 'Apache License 2.0'
